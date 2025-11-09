@@ -4,13 +4,22 @@ import joblib
 import pandas as pd
 import numpy as np
 from scipy.sparse import hstack, csr_matrix
+from pathlib import Path
 
 
 #  Chargement du modèle et métadonnées
 # 
-model = joblib.load("modele_xgboost_eligibilite_credit.pkl")
-encoder = joblib.load("encodeur_variables_categorielles.pkl")
-colonnes_modele = joblib.load("colonnes_modele.pkl")
+# chemin du dossier où se trouve ce script
+BASE_DIR = Path(__file__).parent
+
+# chargement des fichiers avec chemin relatif
+model = joblib.load(BASE_DIR / "modele_xgboost_eligibilite_credit.pkl")
+encoder = joblib.load(BASE_DIR / "encodeur_variables_categorielles.pkl")
+colonnes_modele = joblib.load(BASE_DIR / "colonnes_modele.pkl")
+
+
+
+
 
 app = FastAPI(
     title="API Éligibilité Crédit",
