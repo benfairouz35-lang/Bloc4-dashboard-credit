@@ -21,8 +21,7 @@ file_path = os.path.join(os.path.dirname(__file__), "dashboard_eligibilite2.csv"
 df = pd.read_csv(file_path, sep=";")
 
 #API_URL = "http://127.0.0.1:8000/predict" pour lancement local
-API_URL = "https://bloc4-dashboard-credit.onrender.com"
-
+API_URL = "https://bloc4-dashboard-credit.onrender.com/predict"
 # CSS 
 # ============================
 
