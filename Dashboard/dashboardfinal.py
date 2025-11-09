@@ -80,7 +80,8 @@ st.markdown("""
 
 # ============================
 # HEADER
-logo_path = Path(r"C:\Users\fbe\Desktop\BLOCPython\BensaadiFairouz\PROJET\Dashboard\logoPage.webp")
+logo_path = Path(__file__).parent / "logoPage.webp"
+
 
 col_logo, col_title = st.columns([0.1, 0.9])
 
